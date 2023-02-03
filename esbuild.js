@@ -5,11 +5,11 @@ require("esbuild")
     entryPoints: ["src/index.tsx"],
     outdir: "dist",
     bundle: true,
-    // minify: true,
+    minify: process.env.NODE_ENV === 'production',
     loader: {
       ".png": "file",
     },
-    watch: true,
+    watch: process.env.NODE_ENV === undefined,
     plugins: [
       copyStaticFiles({
         src: "./src/public",

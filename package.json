@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node ./esbuild.js",
     "start": "node ./express.dev.js",
     "start:prod": "node ./express.js"
